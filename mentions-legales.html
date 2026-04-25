@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Initium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="nav">
+    <a href="index.html" class="site-nav__logo">Initium</a>
+    <button class="site-nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html#methode">Notre méthode</a></li>
+      <li><a href="index.html#equipe">L'équipe</a></li>
+      <li><a href="mini-audit.html" class="btn btn--filled" style="padding: 10px 24px; font-size: 11px;">Mini-audit gratuit</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== CONTENU ===== -->
+  <div class="legal-content">
+    <h1>Mentions légales</h1>
+
+    <h2>Éditeur du site</h2>
+    <p>Initium — Cabinet de brand strategy</p>
+    <p>Responsables de publication : Farah &amp; Jad</p>
+    <p>Contact : <a href="mailto:contact@initium.co" style="color: var(--rouge);">contact@initium.co</a></p>
+
+    <h2>Hébergement</h2>
+    <p>Ce site est hébergé par GitHub Pages (GitHub, Inc. — 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA).</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes) est la propriété exclusive d'Initium, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation sans autorisation préalable est interdite.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Les données collectées via le formulaire de contact sont utilisées uniquement dans le cadre de votre demande de mini-audit. Elles ne sont ni cédées ni vendues à des tiers.</p>
+    <p>Le formulaire est traité par Formspree (Formspree, Inc.). Les données sont transmises de manière sécurisée (HTTPS).</p>
+    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:contact@initium.co" style="color: var(--rouge);">contact@initium.co</a>.</p>
+
+    <h2>Cookies</h2>
+    <p>Ce site n'utilise aucun cookie de tracking ni outil d'analyse tiers.</p>
+
+    <h2>Crédits</h2>
+    <p>Illustrations : images générées par IA (Freepik).</p>
+    <p>Typographies : Cinzel (Google Fonts), Inter (Google Fonts).</p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <span>© 2026 Initium</span>
+    <ul class="site-footer__links">
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:contact@initium.co">contact@initium.co</a></li>
+    </ul>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Hamburger menu --- */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    /* --- Nav scroll --- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('site-nav--scrolled', window.scrollY > 80);
+    });
+  </script>
+
+</body>
+</html>

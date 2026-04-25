@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-audit de marque gratuit — Initium</title>
+  <meta name="description" content="Demandez votre mini-audit de marque gratuit. 2 semaines de diagnostic, des recommandations concrètes, sans engagement.">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Curseur rouge custom -->
+  <div class="cursor-dot" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="nav">
+    <a href="index.html" class="site-nav__logo">Initium</a>
+    <button class="site-nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html#methode">Notre méthode</a></li>
+      <li><a href="index.html#equipe">L'équipe</a></li>
+      <li><a href="mini-audit.html" class="btn btn--filled" style="padding: 10px 24px; font-size: 11px;">Mini-audit gratuit</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO MINIMAL ===== -->
+  <section class="mini-hero">
+    <div class="pattern-layer pat-grid" style="inset: 0; opacity: 0.4;"></div>
+    <div style="position: relative; z-index: 2;">
+      <h1 class="t-lapidaire t-lapidaire--md mb-24">Mini-audit de marque gratuit</h1>
+      <p class="t-corps t-corps--lg" style="color: var(--gris-cendre);">2 semaines · Un diagnostic · Des recommandations · Sans engagement</p>
+    </div>
+  </section>
+
+  <!-- ===== 3 ÉTAPES ===== -->
+  <div class="steps-bar">
+    <div class="steps-bar__item">
+      <div class="steps-bar__num">1</div>
+      <div class="steps-bar__title">Prise de contact</div>
+      <p class="steps-bar__text">Nous vous recontactons sous 48h.</p>
+    </div>
+    <div class="steps-bar__item">
+      <div class="steps-bar__num">2</div>
+      <div class="steps-bar__title">Diagnostic</div>
+      <p class="steps-bar__text">2 semaines d'analyse (identité, positionnement, digital).</p>
+    </div>
+    <div class="steps-bar__item">
+      <div class="steps-bar__num">3</div>
+      <div class="steps-bar__title">Recommandations</div>
+      <p class="steps-bar__text">Un rapport concret. Si vous souhaitez aller plus loin, nous vous proposons l'offre adaptée.</p>
+    </div>
+  </div>
+
+  <!-- ===== FORMULAIRE ===== -->
+  <section class="form-section">
+    <div class="form-wrapper">
+      <form action="https://formspree.io/f/xpwrvqnj" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="activite">Activité</label>
+          <select id="activite" name="activite" required>
+            <option value="" disabled selected>Sélectionnez votre activité</option>
+            <option value="Vigneron">Vigneron</option>
+            <option value="Parfumeur">Parfumeur</option>
+            <option value="Distillerie">Distillerie</option>
+            <option value="Horloger">Horloger</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="site">URL de votre site <span style="opacity: 0.5;">(optionnel)</span></label>
+          <input type="url" id="site" name="site" placeholder="https://">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Un mot sur votre marque <span style="opacity: 0.5;">(optionnel)</span></label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <div style="text-align: center; margin-top: 32px;">
+          <button type="submit" class="btn btn--filled">Envoyer ma demande</button>
+        </div>
+      </form>
+
+      <div class="reassurance" style="margin-top: 40px;">
+        <span>Sans engagement</span>
+        <span>Réponse sous 48h</span>
+        <span>Confidentiel</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <span>© 2026 Initium</span>
+    <ul class="site-footer__links">
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:contact@initium.co">contact@initium.co</a></li>
+    </ul>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Curseur custom --- */
+    const cursor = document.getElementById('cursor');
+    if (cursor && window.innerWidth > 768 && !('ontouchstart' in window)) {
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+      document.querySelectorAll('a, .btn, button[type="submit"], select').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-dot--hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-dot--hover'));
+      });
+    } else if (cursor) {
+      cursor.style.display = 'none';
+    }
+
+    /* --- Hamburger menu --- */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    /* --- Nav scroll --- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('site-nav--scrolled', window.scrollY > 80);
+    });
+  </script>
+
+</body>
+</html>
