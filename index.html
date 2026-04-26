@@ -10,10 +10,37 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jadachpro.github.io/initium-site-v3/">
   <meta property="og:image" content="https://jadachpro.github.io/initium-site-v3/img/venus-selfie.png">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='serif' font-size='22' font-weight='700' fill='%23B51E1E'%3EI%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Initium",
+    "description": "Cabinet de brand strategy spécialisé dans l'artification de marques premium.",
+    "url": "https://jadachpro.github.io/initium-site-v3/",
+    "image": "https://jadachpro.github.io/initium-site-v3/img/venus-selfie.png",
+    "areaServed": ["France", "International"],
+    "founder": [
+      {"@type": "Person", "name": "Farah"},
+      {"@type": "Person", "name": "Jad"}
+    ],
+    "knowsAbout": ["Brand Strategy", "Artification", "Luxury Branding", "Packaging Design"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    }
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-to-content">Aller au contenu principal</a>
 
   <!-- Curseur rouge custom -->
   <div class="cursor-dot" id="cursor"></div>
@@ -27,25 +54,32 @@
     <ul class="site-nav__links" id="navLinks">
       <li><a href="#methode">Notre méthode</a></li>
       <li><a href="#equipe">L'équipe</a></li>
-      <li><a href="mini-audit.html" class="btn btn--filled" style="padding: 10px 24px; font-size: 11px;">Mini-audit gratuit</a></li>
+      <li><a href="mini-audit.html" class="site-nav__cta">Mini-audit gratuit</a></li>
     </ul>
   </nav>
 
+  <main id="main-content">
+
   <!-- ===== S1 — HERO ===== -->
   <section class="hero">
-    <div class="pattern-layer pat-grid" style="inset: 0; opacity: 0.5;" data-parallax="0.02"></div>
-    <div class="pattern-layer pat-diag" style="top: 30%; left: 50%; right: 0; bottom: 0; opacity: 0.4;" data-parallax="0.04"></div>
+    <div class="pattern-layer pattern-layer--full pat-grid" style="opacity: 0.5;" data-parallax="0.02"></div>
+    <div class="pattern-layer pattern-layer--50 pat-diag" style="top: 30%; opacity: 0.4;" data-parallax="0.04"></div>
     <div class="hero__deco-letter" data-parallax="0.06">I</div>
 
     <div class="hero__inner">
       <div class="hero__content">
         <p class="t-intertitre mb-32 reveal">Cabinet de brand strategy</p>
-        <h1 class="t-lapidaire t-lapidaire--lg mb-24 reveal reveal--delay-1">Vos produits sont excellents. Votre marque devrait l'être aussi.</h1>
-        <div class="filet mb-32 reveal reveal--delay-2"></div>
-        <p class="t-corps t-corps--lg mb-48 reveal reveal--delay-2" style="max-width: 460px;">Nous construisons l'image des vignerons, parfumeurs et artisans d'exception.</p>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;" class="reveal reveal--delay-3">
+        <h1 class="t-lapidaire t-lapidaire--xxl mb-24 reveal">Vos produits sont excellents. Votre marque devrait l'être aussi.</h1>
+        <div class="hero__line mb-32 reveal"></div>
+        <p class="t-corps t-corps--lg mb-48 hero__subtitle reveal">Nous construisons l'image des vignerons, parfumeurs et artisans d'exception.</p>
+        <div class="hero__actions reveal">
           <a href="mini-audit.html" class="btn btn--filled">Demander votre mini-audit gratuit</a>
           <a href="#methode" class="btn">Découvrir notre approche</a>
+        </div>
+        <div class="hero__stats reveal">
+          <span>4 secteurs</span>
+          <span>Méthode propriétaire</span>
+          <span>Paris & international</span>
         </div>
       </div>
 
@@ -74,12 +108,12 @@
 
   <!-- ===== S3 — LE PROBLÈME ===== -->
   <section class="section section--perle">
-    <div class="pattern-layer pat-chevron" style="inset: 0; opacity: 0.4;" data-parallax="0.02"></div>
+    <div class="pattern-layer pattern-layer--full pat-chevron" style="opacity: 0.4;" data-parallax="0.02"></div>
 
     <div class="split">
       <div class="split__figure">
         <div class="pattern-layer pat-dots" style="inset: 40px; opacity: 0.4; z-index: 1;" data-parallax="0.03"></div>
-        <img src="img/penseur-laptop.png" alt="Le Penseur au laptop" data-parallax="0.12" data-scale-scroll>
+        <img src="img/penseur-laptop.png" alt="Le Penseur au laptop" loading="lazy" data-parallax="0.12" data-scale-scroll>
       </div>
       <div class="split__text">
         <div class="section-num-giant" data-parallax="0.06">I</div>
@@ -92,27 +126,47 @@
     </div>
   </section>
 
+  <!-- Séparateur -->
+  <div class="section-divider"></div>
+
   <!-- ===== S4 — L'ARTIFICATION ===== -->
-  <section class="section section--blanc" style="text-align: center;">
-    <div class="pattern-layer pat-meandre" style="inset: 0; opacity: 0.35;" data-parallax="0.015"></div>
+  <section class="section section--blanc section--centered">
+    <div class="pattern-layer pattern-layer--full pat-meandre" style="opacity: 0.35;" data-parallax="0.015"></div>
     <div class="pattern-layer pat-lines" style="top: 0; left: 0; width: 40%; bottom: 0; opacity: 0.3;" data-parallax="0.03"></div>
 
     <div class="section__inner">
-      <div class="section-num-giant" style="left: 50%; transform: translateX(-50%); right: auto;" data-parallax="0.05">II</div>
-      <div class="section-number reveal" style="justify-content: center;">II</div>
+      <div class="section-num-giant section-num-giant--centered" data-parallax="0.05">II</div>
+      <div class="section-number section-number--centered reveal">II</div>
       <p class="t-intertitre mb-24 reveal">Notre réponse</p>
-      <h2 class="t-lapidaire t-lapidaire--md mb-24 reveal reveal--delay-1">L'artification</h2>
-      <div class="filet mb-32 reveal reveal--delay-1" style="margin: 0 auto;"></div>
-      <p class="t-corps t-corps--lg mb-48 reveal reveal--delay-2" style="max-width: 580px; margin: 0 auto;">L'artification, c'est traiter chaque point de contact de votre marque — logo, packaging, site, réseaux — avec l'exigence qu'on applique à une œuvre. Le résultat&nbsp;: une marque qu'on reconnaît, qu'on retient, qu'on recommande.</p>
-      <div class="phrase-memorable reveal reveal--delay-2" style="max-width: 520px; margin: 40px auto;">Une grande marque ne décore pas un produit. Elle le révèle.</div>
-      <a href="#methode" class="btn reveal reveal--delay-3">Voir comment ça marche</a>
+      <h2 class="t-lapidaire t-lapidaire--lg mb-24 reveal reveal--delay-1">L'artification</h2>
+      <div class="filet--centered mb-32 reveal reveal--delay-1"></div>
+      <p class="t-corps t-corps--lg mb-48 reveal reveal--delay-2" style="max-width: 580px; margin-left: auto; margin-right: auto;">L'artification, c'est traiter chaque point de contact de votre marque — logo, packaging, site, réseaux — avec l'exigence qu'on applique à une œuvre. Le résultat&nbsp;: une marque qu'on reconnaît, qu'on retient, qu'on recommande.</p>
+
+      <!-- 3 piliers -->
+      <div class="pillars">
+        <div class="pillar reveal-scale">
+          <div class="pillar__title">Intention</div>
+          <p class="pillar__text">Chaque choix graphique, chaque mot, chaque matière raconte quelque chose de précis.</p>
+        </div>
+        <div class="pillar reveal-scale reveal--delay-1">
+          <div class="pillar__title">Cohérence</div>
+          <p class="pillar__text">Du logo au packaging, du site aux réseaux — un système visuel unifié.</p>
+        </div>
+        <div class="pillar reveal-scale reveal--delay-2">
+          <div class="pillar__title">Élévation</div>
+          <p class="pillar__text">Transformer un produit d'exception en une marque qu'on désire.</p>
+        </div>
+      </div>
+
+      <div class="phrase-memorable reveal-blur">Une grande marque ne décore pas un produit. Elle le révèle.</div>
+      <a href="#methode" class="btn reveal">Voir comment ça marche</a>
     </div>
   </section>
 
   <!-- ===== S5 — LA MÉTHODE ===== -->
   <section class="section section--noir" id="methode">
-    <div class="pattern-layer pat-grid--light" style="inset: 0;" data-parallax="0.02"></div>
-    <div class="pattern-layer pat-diag--light" style="top: 0; right: 0; width: 50%; bottom: 0;" data-parallax="0.04"></div>
+    <div class="pattern-layer pattern-layer--full pat-grid--light" data-parallax="0.02"></div>
+    <div class="pattern-layer pattern-layer--50 pat-diag--light" data-parallax="0.04"></div>
 
     <div class="section__inner">
       <div class="section-num-giant" data-parallax="0.06">III</div>
@@ -147,11 +201,14 @@
         </div>
       </div>
 
-      <div style="margin-top: 80px;" class="reveal">
+      <div class="section__cta-wrap mt-80 reveal">
         <a href="mini-audit.html" class="btn" style="color: var(--blanc-casse); border-bottom-color: var(--rouge);">Demander votre mini-audit gratuit</a>
       </div>
     </div>
   </section>
+
+  <!-- Séparateur -->
+  <div class="section-divider"></div>
 
   <!-- ===== S6 — LES OFFRES ===== -->
   <section class="section section--perle">
@@ -162,28 +219,28 @@
       <h2 class="t-lapidaire t-lapidaire--md mb-16 reveal reveal--delay-1">Ce que nous livrons</h2>
 
       <div class="grid-2x2">
-        <div class="card reveal">
+        <div class="card reveal-scale">
           <div class="card__corner"></div>
           <div class="card__roman">I.</div>
           <div class="card__title">Identité de marque artifiée</div>
           <p class="card__text">Logo, charte, univers visuel et storytelling. Tout conçu comme un ensemble cohérent.</p>
           <div class="card__delai">3-4 semaines</div>
         </div>
-        <div class="card reveal reveal--delay-1">
+        <div class="card reveal-scale reveal--delay-1">
           <div class="card__corner"></div>
           <div class="card__roman">II.</div>
           <div class="card__title">Stratégie digitale</div>
           <p class="card__text">Présence numérique alignée sur votre positionnement. Contenu, planning, ton de voix.</p>
           <div class="card__delai">2-3 semaines</div>
         </div>
-        <div class="card reveal reveal--delay-2">
+        <div class="card reveal-scale reveal--delay-2">
           <div class="card__corner"></div>
           <div class="card__roman">III.</div>
           <div class="card__title">Concept packaging artifié</div>
           <p class="card__text">Votre packaging incarne votre marque. Forme, matière, graphisme — tout signifie.</p>
           <div class="card__delai">3-4 semaines</div>
         </div>
-        <div class="card reveal reveal--delay-3">
+        <div class="card reveal-scale reveal--delay-3">
           <div class="card__corner"></div>
           <div class="card__roman">IV.</div>
           <div class="card__title">Site vitrine artifié</div>
@@ -194,7 +251,7 @@
 
       <p class="retainer-note reveal">Retainer post-projet disponible (limité à 3 clients simultanés).</p>
 
-      <div style="text-align: center; margin-top: 48px;" class="reveal">
+      <div class="section__cta-wrap reveal">
         <a href="mini-audit.html" class="btn btn--filled">Commencer par un mini-audit gratuit</a>
       </div>
     </div>
@@ -235,16 +292,16 @@
       </div>
 
       <div class="split__figure split__figure--placeholder">
-        <img src="img/muse-guitare.png" alt="Farah — co-fondatrice Initium" data-parallax="0.12" data-scale-scroll>
+        <img src="img/muse-guitare.png" alt="Farah — co-fondatrice Initium" loading="lazy" data-parallax="0.12" data-scale-scroll>
       </div>
     </div>
   </section>
 
   <!-- ===== S8 — FAQ ===== -->
   <section class="section section--noir">
-    <div class="pattern-layer pat-grid--light" style="inset: 0;" data-parallax="0.02"></div>
+    <div class="pattern-layer pattern-layer--full pat-grid--light" data-parallax="0.02"></div>
 
-    <div class="section__inner" style="max-width: 800px;">
+    <div class="section__inner section__inner--narrow">
       <div class="section-num-giant" data-parallax="0.06">VI</div>
       <div class="section-number reveal">VI</div>
       <p class="t-intertitre mb-24 reveal">Questions</p>
@@ -252,32 +309,32 @@
 
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-question"><span class="faq-roman">I.</span>C'est quoi l'artification&nbsp;?</button>
-          <div class="faq-answer">
+          <button class="faq-question" aria-expanded="false"><span class="faq-roman">I.</span>C'est quoi l'artification&nbsp;?</button>
+          <div class="faq-answer" role="region">
             <p>Traiter chaque élément de votre marque — logo, packaging, site, contenu — avec l'intention et la cohérence d'une démarche artistique. Le résultat&nbsp;: une marque qui se distingue naturellement.</p>
           </div>
         </div>
         <div class="faq-item reveal reveal--delay-1">
-          <button class="faq-question"><span class="faq-roman">II.</span>Pourquoi un cabinet, pas une agence&nbsp;?</button>
-          <div class="faq-answer">
+          <button class="faq-question" aria-expanded="false"><span class="faq-roman">II.</span>Pourquoi un cabinet, pas une agence&nbsp;?</button>
+          <div class="faq-answer" role="region">
             <p>Une agence exécute. Un cabinet pense puis exécute. Nous construisons des systèmes de marque cohérents et durables, fondés sur une méthode.</p>
           </div>
         </div>
         <div class="faq-item reveal reveal--delay-1">
-          <button class="faq-question"><span class="faq-roman">III.</span>Combien ça coûte&nbsp;?</button>
-          <div class="faq-answer">
+          <button class="faq-question" aria-expanded="false"><span class="faq-roman">III.</span>Combien ça coûte&nbsp;?</button>
+          <div class="faq-answer" role="region">
             <p>Chaque projet est chiffré sur mesure après le mini-audit gratuit. Le mini-audit vous donne une vision claire avant tout engagement.</p>
           </div>
         </div>
         <div class="faq-item reveal reveal--delay-2">
-          <button class="faq-question"><span class="faq-roman">IV.</span>Qu'est-ce que le mini-audit gratuit&nbsp;?</button>
-          <div class="faq-answer">
+          <button class="faq-question" aria-expanded="false"><span class="faq-roman">IV.</span>Qu'est-ce que le mini-audit gratuit&nbsp;?</button>
+          <div class="faq-answer" role="region">
             <p>Un diagnostic de 2 semaines. Nous analysons votre marque (identité, positionnement, présence digitale) et vous livrons des recommandations concrètes. Sans engagement.</p>
           </div>
         </div>
         <div class="faq-item reveal reveal--delay-2">
-          <button class="faq-question"><span class="faq-roman">V.</span>Vous travaillez uniquement avec le luxe&nbsp;?</button>
-          <div class="faq-answer">
+          <button class="faq-question" aria-expanded="false"><span class="faq-roman">V.</span>Vous travaillez uniquement avec le luxe&nbsp;?</button>
+          <div class="faq-answer" role="region">
             <p>Nous travaillons avec les marques de produits premium&nbsp;: vignerons, parfumeurs, distilleries, horlogers. Le point commun&nbsp;: un savoir-faire d'exception qui mérite une image à la hauteur.</p>
           </div>
         </div>
@@ -288,9 +345,9 @@
   <!-- ===== S9 — CTA FINAL ===== -->
   <section class="section section--blanc cta-final">
     <div class="section__inner">
-      <div class="ornament-cross mb-48 reveal" style="margin: 0 auto 48px;"></div>
+      <div class="ornament-cross mb-48 reveal" style="margin-left: auto; margin-right: auto;"></div>
       <h2 class="t-lapidaire t-lapidaire--md mb-24 reveal reveal--delay-1">La prochaine étape est simple.</h2>
-      <p class="t-corps t-corps--lg mb-48 reveal reveal--delay-2" style="max-width: 480px; margin: 0 auto 48px;">Commencez par un mini-audit gratuit de 2 semaines. Nous analysons votre marque et vous livrons des recommandations concrètes. Sans engagement.</p>
+      <p class="t-corps t-corps--lg mb-48 reveal reveal--delay-2" style="max-width: 480px; margin-left: auto; margin-right: auto;">Commencez par un mini-audit gratuit de 2 semaines. Nous analysons votre marque et vous livrons des recommandations concrètes. Sans engagement.</p>
       <div class="reveal reveal--delay-3">
         <a href="mini-audit.html" class="btn btn--filled">Demander votre mini-audit gratuit</a>
         <p class="sub-cta">Réponse sous 48h</p>
@@ -298,6 +355,8 @@
       <p class="closing-phrase reveal reveal--delay-3">Le commencement est un art.</p>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== S10 — FOOTER ===== -->
   <footer class="site-footer">
@@ -315,97 +374,7 @@
     <a href="mini-audit.html">Mini-audit gratuit</a>
   </div>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script>
-    /* --- Curseur custom --- */
-    const cursor = document.getElementById('cursor');
-    if (cursor && window.innerWidth > 768 && !('ontouchstart' in window)) {
-      document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-      });
-      document.querySelectorAll('a, .btn, .card, .faq-question').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-dot--hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-dot--hover'));
-      });
-    } else if (cursor) {
-      cursor.style.display = 'none';
-    }
-
-    /* --- Hamburger menu --- */
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    /* --- Nav scroll --- */
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('site-nav--scrolled', window.scrollY > 80);
-    });
-
-    /* --- Reveal au scroll --- */
-    const reveals = document.querySelectorAll('.reveal, .reveal-h');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(
-            entry.target.classList.contains('reveal-h') ? 'reveal-h--visible' : 'reveal--visible'
-          );
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    /* --- Parallax multicouche + scale-on-scroll --- */
-    const isMobile = window.innerWidth <= 768;
-    if (!isMobile) {
-      const parallaxEls = document.querySelectorAll('[data-parallax]');
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            const scrollY = window.pageYOffset;
-            parallaxEls.forEach(el => {
-              const speed = parseFloat(el.dataset.parallax);
-              const rect = el.getBoundingClientRect();
-              const centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
-              const translateY = centerOffset * speed * -1;
-              if (el.hasAttribute('data-scale-scroll')) {
-                const progress = Math.max(0, Math.min(1, 1 - rect.top / window.innerHeight));
-                const scale = 0.92 + progress * 0.12;
-                const baseRotate = el.closest('.split__figure') ? 1.5 : -2;
-                el.style.transform = `translateY(${translateY}px) scale(${scale}) rotate(${baseRotate}deg)`;
-              } else {
-                el.style.transform = `translateY(${translateY}px)`;
-              }
-            });
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    }
-
-    /* --- FAQ Accordion --- */
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!wasOpen) item.classList.add('open');
-      });
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>

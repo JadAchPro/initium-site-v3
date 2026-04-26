@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentions légales — Initium</title>
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5F2EC'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='serif' font-size='22' font-weight='700' fill='%23B51E1E'%3EI%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-to-content">Aller au contenu principal</a>
 
   <!-- Navigation -->
   <nav class="site-nav" id="nav">
@@ -18,9 +23,11 @@
     <ul class="site-nav__links" id="navLinks">
       <li><a href="index.html#methode">Notre méthode</a></li>
       <li><a href="index.html#equipe">L'équipe</a></li>
-      <li><a href="mini-audit.html" class="btn btn--filled" style="padding: 10px 24px; font-size: 11px;">Mini-audit gratuit</a></li>
+      <li><a href="mini-audit.html" class="site-nav__cta">Mini-audit gratuit</a></li>
     </ul>
   </nav>
+
+  <main id="main-content">
 
   <!-- ===== CONTENU ===== -->
   <div class="legal-content">
@@ -29,7 +36,7 @@
     <h2>Éditeur du site</h2>
     <p>Initium — Cabinet de brand strategy</p>
     <p>Responsables de publication : Farah &amp; Jad</p>
-    <p>Contact : <a href="mailto:contact@initium.co" style="color: var(--rouge);">contact@initium.co</a></p>
+    <p>Contact : <a href="mailto:contact@initium.co">contact@initium.co</a></p>
 
     <h2>Hébergement</h2>
     <p>Ce site est hébergé par GitHub Pages (GitHub, Inc. — 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA).</p>
@@ -40,7 +47,7 @@
     <h2>Données personnelles</h2>
     <p>Les données collectées via le formulaire de contact sont utilisées uniquement dans le cadre de votre demande de mini-audit. Elles ne sont ni cédées ni vendues à des tiers.</p>
     <p>Le formulaire est traité par Formspree (Formspree, Inc.). Les données sont transmises de manière sécurisée (HTTPS).</p>
-    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:contact@initium.co" style="color: var(--rouge);">contact@initium.co</a>.</p>
+    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:contact@initium.co">contact@initium.co</a>.</p>
 
     <h2>Cookies</h2>
     <p>Ce site n'utilise aucun cookie de tracking ni outil d'analyse tiers.</p>
@@ -49,6 +56,8 @@
     <p>Illustrations : images générées par IA (Freepik).</p>
     <p>Typographies : Cinzel (Google Fonts), Inter (Google Fonts).</p>
   </div>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
@@ -61,28 +70,7 @@
     </ul>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script>
-    /* --- Hamburger menu --- */
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    /* --- Nav scroll --- */
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('site-nav--scrolled', window.scrollY > 80);
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>
